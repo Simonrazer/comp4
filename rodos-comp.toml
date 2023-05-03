@@ -1,0 +1,15 @@
+
+
+#Flags can either be a plain string, or a list of strings. When using a list, the names of other Flags may be used to include them
+#!!! Includes are handeled in order of apperance, and are simple pastes !!!
+CFLAGS = "-fstandalone-debug -g -m32 -Wall -Wpedantic -Wextra -Wcast-qual -Wconversion -Wsign-conversion -Wfloat-conversion -Wdouble-promotion -Wnull-dereference -Wstrict-aliasing -Wno-long-long -Wno-cpp -fno-exceptions -O0"
+CPPFLAGS = [
+    "CFLAGS",
+    "-fno-rtti -fno-exceptions  -std=c++14"
+]
+LINKERFLAGS = [
+    "CPPFLAGS",
+    "-lm -no-pie -o a.out" #rodos also has -lrodos, but that doesn't exist?
+]
+
+EXCLUDES = ["excl"]

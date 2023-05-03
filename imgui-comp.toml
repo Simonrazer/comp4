@@ -1,0 +1,5 @@
+CPPCOMP = "c++"
+CPPFLAGS = "-std=c++11 `sdl2-config --cflags`"
+EXCLUDES = ["examples"]
+LINKERFLAGS = "`sdl2-config --cflags` -lGL -ldl `sdl2-config --libs`"
+TARGETS = ["target"]
